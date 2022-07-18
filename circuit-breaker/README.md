@@ -1,23 +1,20 @@
 
-
-
 Client -> Service1 -> Service2
 
 
+immediate failure
+catch exception and return
+repeated calls when remote service is down
 
+timeout failure
+assigned thread waiting for response when timeout
+problem if there is high request rate and all wait for timeout
+eventually callign service can run out of resources
 
+	flooding target service may cause issue for other services that use it
 
-
-
-
-
-
-
-
-
-
-
-
+single failures are common
+we could implement counter of failed/success requests e.g. for last 50 requests
 
 
 
